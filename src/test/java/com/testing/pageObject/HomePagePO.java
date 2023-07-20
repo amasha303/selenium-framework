@@ -19,6 +19,15 @@ public class HomePagePO {
         PageFactory.initElements(driver, this);
     }
 
+    //Create Methods to describe web element actions - Stage 3
+    public void clickCreateAccountLink(){
+        CreateAccountLink.click();
+    }
+
+    public void clickSignInLink(){
+        SignInLink.click();
+    }
+
 
 
 
