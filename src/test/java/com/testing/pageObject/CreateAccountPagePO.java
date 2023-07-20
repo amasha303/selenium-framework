@@ -33,6 +33,35 @@ public class CreateAccountPagePO {
         PageFactory.initElements(driver, this);
     }
 
+    //Create Methods to describe web element actions - Stage 3
+
+    public void enterFirstName(String FirstName){
+        FirstNameField.sendKeys(FirstName);
+
+    }
+
+    public void enterLastName(String LastName){
+        LastNameField.sendKeys(LastName);
+
+    }
+
+    public void enterEmailAddress(String EmailAddress){
+        EmailAddressField.sendKeys(EmailAddress);
+
+    }
+
+    public void enterPassWord(String PassWord){
+        PassWordField.sendKeys(PassWord);
+    }
+
+    public void enterConfirmPassWord(String ConfirmPassWord){
+        PassWordConfirmationField.sendKeys(ConfirmPassWord);
+    }
+
+    public void clickCreateAccountButton(){
+        CreateAnAccountButton.click();
+    }
+
 
 
 
