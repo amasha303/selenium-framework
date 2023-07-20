@@ -3,6 +3,7 @@ package com.testing.pageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CreateAccountPagePO {
 
@@ -23,8 +24,14 @@ public class CreateAccountPagePO {
     @FindBy(id = "password-confirmation")
     public static WebElement PassWordConfirmationField;
 
-    @FindBy(linkText = "Create an Account")
-    public static WebElement CreateAnAccountLink;
+    @FindBy(css = "#form-validate > div > div.primary > button > span")
+    public static WebElement CreateAnAccountButton;
+
+
+    //Initialize Elements Using Selenium Webdriver - Stage 2
+    public CreateAccountPagePO(WebDriver driver){
+        PageFactory.initElements(driver, this);
+    }
 
 
 
